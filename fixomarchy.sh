@@ -53,5 +53,13 @@ if [ "$1" == "-p" ]; then
 
 fi
 
+if [ -z "$(grep 'Q, Close' ~/.config/hypr/bindings.conf)" ]; then
+  echo "Fixing Close keybindings, setting it to super Q"
+  echo ""
+  echo "bindd = SUPER, Q, Close Window, killactive" >> ~/.config/hypr/bindings.conf
+else
+  echo "Super Q binding already set, won't touch"
+  echo ""
+fi
 
 echo "Nothing Left To Fix"
