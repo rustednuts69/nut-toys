@@ -3,6 +3,9 @@
 cd
 hypridle_conf=".config/hypr/hypridle.conf"
 
+# gets a nice starship theme
+starship preset pastel-powerline -o ~/.config/starship.toml
+
 fix_screensaver_times () {
 sed -i "s/150/1500/g" "$hypridle_conf"
 sed -i "s/300/3000/g" "$hypridle_conf"
